@@ -1,6 +1,6 @@
 # Summary
 
 * [ভূমিকা](README.md)
-* [শুরুর কথাintroduction.md)
+* [শুরুর কথা](introduction.md)
 * [প্রথম অধ্যায়](1.01.01 শেল.md)
    * [সাব চ্যাপ্টার](1.01.01 শেল.md)
