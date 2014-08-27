@@ -27,8 +27,8 @@ Su Mo Tu We Th Fr Sa
 ### কমান্ডের রকমফের ###
 আমরা যে কমান্ডগুলো ব্যবহার করি, সেগুলো আসলে কী? কমান্ডগুলোকে চারটি ভাগে ভাগ করা যায়:
 
-*  *Program:* কোনো প্রোগ্রাম(লিনাক্সে অধিকাংশ প্রোগ্রামই বেশকিছু কমান্ডলাইন ফাংশনালিটি দেয়।) আপনার কমান্ড হতে পারে। সেক্ষেত্রে তার নামটি কমান্ড হিসেবে ব্যবহৃত হয়। যেমন: vlc, cmus, mutt.
-*  *Shell Builtin:* শেল প্রোগ্রামগুলোর কিছু বিল্টইন কমান্ড থাকে। এগুলোর আলাদাভাবে অস্তিত্ব থাকে না বা লিংক হিসেবে থাকে। এগুলোও কমান্ড। যেমন: cp, rm, mv.
+*  *Program:* কোনো প্রোগ্রাম(লিনাক্সে অধিকাংশ প্রোগ্রামই বেশকিছু কমান্ডলাইন ফাংশনালিটি দেয়।) আপনার কমান্ড হতে পারে। সেক্ষেত্রে তার নামটি কমান্ড হিসেবে ব্যবহৃত হয়।
+*  *Shell Builtin:* শেল প্রোগ্রামগুলোর কিছু বিল্টইন কমান্ড থাকে। এগুলোর আলাদাভাবে অস্তিত্ব থাকে না বা লিংক হিসেবে থাকে। এগুলোও কমান্ড।
 *  *Shell Function:* কোনো কাজের জন্য কিছু কমান্ডকে বিশেষভাবে ব্যবহার করা হয়। কিন্তু যদি এমন হয় যে বারবার ওই কমান্ডগুলো ব্যবহার করতে হচ্ছে তখন সেগুলোকে একসাথে একটি ফাংশনে রূপ দেয়া হয় কম পরিশ্রমে কাজ করার জন্য। ফাংশনটির নাম দিয়ে ফাংশনটিকে ব্যবহার করা যায় এবং এটিও কমান্ড হিসেবে বিবেচিত হবে।
 *  *alias:* এলিয়াসকে সহজভাষায় ডাকনাম বলা যায়। একটা কমান্ডের বিশেষ ব্যবহারিক রূপের ডাকনাম দেয়া যেতে পারে নিজের সুবিধার্থে। এই ডাকনামগুলোও কমান্ড
 
@@ -45,3 +45,104 @@ me@howtocode-pc:~$ cp -rv /var/cache/apt/archive/ ~/backup/
 *  */var/cache/apt/archives/ ~/backup/*: এই অংশটা আর্গুমেন্ট। যখন কপি করতে বলছি, তখন নিশ্চয়ই বলা উচিৎ কি কপি করবে এবং কোথায় কপি করবে। এইখানে স্পেস দিয়ে আলাদা করা দুটি আর্গুমেন্ট আছে। প্রথমটি কি কপি করতে হবে ও দ্বিতীয়টি কোথায় কপি করতে হবে তা বলে দেয়।
 
 তাহলে পুরো কমান্ডটিতে আমরা কি বলতে চাচ্ছি? আমরা বলতে চাচ্ছি যে 'root' ফোল্ডারের ভেতর(কোনো ফাইল বা ডিরেক্টরির পাথের শুরুতে '/' থাকলে সেটাকে রুট বোঝায়) যে 'var' ফোল্ডার, তারমধ্যে 'apt' এবং তারমধ্যে 'archives' নামের যে ফোল্ডারটি তাকে তার ভিতরে রাখা সবকিছু সহ(recursively) হোম ফোল্ডারের মধ্যে 'backup' ফোল্ডারে কপি করে রাখতে হবে। এবং এই কাজের বিস্তারিত জানাতে হবে।
+
+## কমান্ড চেনা, কমান্ড জানা ##
+
+আমরা জেনেছি ৪ রকম কমান্ডের কথা, আর জেনেছি সেই কমান্ড কত দুর্বোধ্যভাবে ব্যবহার করা যায়। একটা প্রশ্ন আসতে পারে, বিপুল পরিমান কমান্ডের মধ্যে যদি নতুন কোনো কমান্ড চোখে পড়ে, তো কিভাবে জানবো তার কথা? এবার দেখা যাক কমান্ড চেনা ও জানার উপায়।
+
+### কমান্ড চেনা ###
+
+#### type ####
+
+*type* কমান্ডটির মাধ্যমে আপনি জানতে পারবেন কোনো কমান্ড উপরোক্ত চার ধরনের কোনটি তা জানা যাবে। এজন্য এর আর্গুমেন্ট হিসেবে ওই কমান্ডটি দিতে হবে। অর্থাৎ *cp* কমান্ডটি কোনধরনের তা জানতে আপনার লিখতে হবে *type cp*। কয়েকটা উদাহরণ দেখা যাক:
+
+```
+me@howtocode-pc:~$ type cp
+cp is /bin/cp
+me@howtocode-pc:~$ type type
+type is a shell builtin
+me@howtocode-pc:~$ type ll
+ll is aliased to `ls -alF'
+```
+এখানে *cp* এর জন্য তার পাথ দেখাচ্ছে অর্থাৎ এটি এক্সিকিউটেবল প্রোগ্রাম। অন্যদিকে *type* শেল বিল্টইন এবং *ll* এলিয়াসড করা আছে *ls -alF*। অর্থাৎ *ll* *ls -alF* এর ডাকনাম।
+
+#### which ####
+
+কোনো কমান্ড যদি এক্সিকিউটেবল প্রোগ্রাম হয় তবে তার লোকেশন *which* দিয়ে জানা যায়। যেমন:
+
+```
+me@howtocode-pc:~$ which ls
+/bin/ls
+```
+অর্থাৎ *ls* প্রোগ্রামটি রুট ফোল্ডারের মধ্যে bin ফোল্ডারে আছে।
+
+### কমান্ড জানা ###
+
+#### help ####
+
+bash এর একটি ফিচার হল এতে বিল্টইন কমান্ডগুলোর বিস্তারিত জানা যায় *help* কমান্ড দিয়ে। যেমন:
+
+```
+me@howtocode-pc:~$ help cd
+cd: cd [-L|[-P [-e]] [-@]] [dir]
+    Change the shell working directory.
+    
+    Change the current directory to DIR.  The default DIR is the value of the
+    HOME shell variable.
+    
+    The variable CDPATH defines the search path for the directory containing
+    DIR.  Alternative directory names in CDPATH are separated by a colon (:).
+    A null directory name is the same as the current directory.  If DIR begins
+    with a slash (/), then CDPATH is not used.
+    
+    If the directory is not found, and the shell option `cdable_vars' is set,
+    the word is assumed to be  a variable name.  If that variable has a value,
+    its value is used for DIR.
+    
+    Options:
+        -L	force symbolic links to be followed: resolve symbolic links in
+    	DIR after processing instances of `..'
+        -P	use the physical directory structure without following symbolic
+    	links: resolve symbolic links in DIR before processing instances
+    	of `..'
+        -e	if the -P option is supplied, and the current working directory
+    	cannot be determined successfully, exit with a non-zero status
+        -@  on systems that support it, present a file with extended attributes
+            as a directory containing the file attributes
+    
+    The default is to follow symbolic links, as if `-L' were specified.
+    `..' is processed by removing the immediately previous pathname component
+    back to a slash or the beginning of DIR.
+    
+    Exit Status:
+    Returns 0 if the directory is changed, and if $PWD is set successfully when
+    -P is used; non-zero otherwise.
+```
+
+#### --help ####
+
+অনেক এক্সিকিউটেবল প্রোগ্রাম *--help* অপশনটি সাপোর্ট করে যা দিয়ে ওই কমান্ডটি ব্যবহারের নিয়মকানুন জানা যায়। যেমন:
+
+```
+me@howtocode-pc:~$ mkdir --help
+Usage: mkdir [OPTION]... DIRECTORY...
+Create the DIRECTORY(ies), if they do not already exist.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -m, --mode=MODE   set file mode (as in chmod), not a=rwx - umask
+  -p, --parents     no error if existing, make parent directories as needed
+  -v, --verbose     print a message for each created directory
+  -Z, --context=CTX  set the SELinux security context of each created
+                      directory to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+Report mkdir bugs to bug-coreutils@gnu.org
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+For complete documentation, run: info coreutils 'mkdir invocation'
+```
+
+#### man ####
+
+*man* manual এর সংক্ষিপ্ত রূপ। অধিকাংশ কমান্ডের বিস্তারিত খুঁটিনাটি জানতে এই কমান্ডটি অতুলনীয়। এমনকি সিস্টেমের অনেক গুরুত্বপূর্ণ ব্যাপারও এখানে আলোচনা করা থাকে। কোনো কমান্ডের ম্যনপেজ দেখতে হলে কমান্ডের নামটি এই কমান্ডের আর্গুমেন্ট হিসেবে দিতে হবে। যেমন *cp* এর ম্যানপেজের জন্য *man cp*। এই কমান্ড দেয়ার পর ম্যানপেজটি *less* নামের একটি কমান্ডলাইন টেক্সটভিউয়ারে খুলবে, আপনি এ্যারো কী দিয়ে স্ক্রল করে পড়তে পারবেন এবং *q* চাপলে প্রম্পট ফেরত আসবে।
