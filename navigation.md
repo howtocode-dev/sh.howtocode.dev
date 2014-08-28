@@ -1,0 +1,85 @@
+# নেভিগেশন(Navigation) #
+
+আমরা সবাই ফাইল ম্যানেজারের সাথে পরিচিত। থরে থরে ফোল্ডারে ফোল্ডারে সাজিয়ে রাখা আমাদের ফাইলগুলোতে আমরা ফাইল ম্যানেজারের মাধ্যমে নিয়ন্ত্রণ করি। লক্ষ্য করলেই বুঝবেন অতি সামান্য কাজেও আমাদের ফাইলপত্তর নাড়াচাড়া করতে হয়। অর্থাৎ, ফোল্ডারগুলোতে ঢুকে ফাইল নিয়ে নাড়াচড়া করাটা আসলে খুবই গুরুত্বপূর্ণ ব্যাপার। আর এটা কমান্ডলাইনে করতে গেলে আপনার জানতে হবে কীকরে ফোল্ডারের অরণ্যে বিচরণ করতে হয়।
+
+## পাথ(path) ##
+লিনাক্সের পরিভাষায় ফোল্ডারগুলোকে সাধারনত ডিরেক্টরি(Directory) বলা হয়। কোনো ডিরেক্টরি বা ফাইলের অবস্থানকে তার পাথ(path) বলা হয়। পাথ দুরকমের হয়:
+
+*  **Absolute path বা পরম অবস্থান:** রুট(root) ফোল্ডারের সাপেক্ষে পাথ হলো এ্যাবসলিউট পাথ।
+*  **Relative path বা আপেক্ষিক অবস্থান:** অন্য কোন পাথের সাপেক্ষে পাথ হল রিলেটিভ পাথ।
+
+উদাহরণে পরিষ্কার হওয়ার চেষ্টা করা যাক:
+
+```
+/home/me/e_books/IT/head_first_python.pdf
+
+~/e_books/IT/head_first_python.pdf
+```
+
+উভয়ই আসলে একই ফাইলকে নির্দেশ করে। প্রথমটি এ্যাবসলিউট এবং দ্বিতীয়টি রিলেটিভ পাথ।
+
+প্রথমটির একদম শুরুতে আছে '/' চিহ্নটি। এই চিহ্নটি শুরুতে দিলে রুট ফোল্ডার বোঝায়। তারপর পরপর ফোল্ডারগুলোর নাম আছে। এই ফোল্ডারগুলোর নাম আবার '/' চিহ্ন দিয়ে আলাদা করা। সবশেষে ফাইলটির নাম।
+‌
+দ্বিতীয়টির শুরুতে আছে '~' চিহ্নটি। এটা কোনো নির্দিষ্ট ফোল্ডার না। যখন যে ইউজার ব্যবহার করছে তার হোম ওটা। আমার ইউজারনেম **me**। সুতরাং আমার হোমফোল্ডার /home/me/। আমার জন্য ~ আর /home/me/ একই ব্যাপার। কারো ইউজারনেম tuxboy হলে তারক্ষেত্রে ~ হবে /home/tuxboy/। এই রিলেটিভ পাথটি হোম ডিরেক্টরির সাথে সাপেক্ষে head_first_python.pdf ফাইলটির অবস্থান নির্দেশ করে।
+
+ফাইল বা ডিরেক্টরির পাথের ব্যাপারে দুটো জিনিস মনে রাখতে হবে।
+1.  পাথনেম কেস সেনসিটিভ। অর্থাৎ, e_books কে E_BOOKS বা IT কে it লিখলে হবে না। যেমন যেমন ঠিক তেমন তেমনই লিখতে হবে।
+2.  পাথনেমে স্বাভাবিকভাবে কোনো স্পেস হয় না। অর্থাৎ Untitled Folder কে টার্মিনালে Untitled Folder লিখলে এরর দেখাবে। প্রতিটি স্পেসের আগে ব্যাকস্ল্যাশ অর্থাৎ '\' চিহ্ন দিতে হবে। অর্থাৎ Untitled Folder হবে Untitled\ Folder
+
+## ডিরেক্টরিতে ঘোরাফেরা ##
+
+আমরা যখন ফাইল ম্যানেজার ব্যবহার করি, লক্ষ্য করবেন দুটো জিনিস আপনি সহজে জানতে পারেন। আপনি এখন কোথায় আছেন এবং আপনার সামনে অর্থাৎ এই ফোল্ডারে কি কি আছে। এদুটি জানার জন্য কমান্ড দুটি  হল pwd ও ls।
+
+```
+me@howtocode-pc:~/Music$ pwd
+/home/me/Music
+me@howtocode-pc:~/Music$ ls
+Bob Dylan                                       Ringtones  জাতিস্মর
+Music                                           Veer       রতন দা
+Pete Seeger - The Essential Pete Seeger (2005)  জল এর গান  রবীন্দ্রসঙ্গীত
+```
+
+প্রথম উদাহরণটি **pwd** কমান্ডের। কমান্ডের পুরো নাম **print working directory**। অর্থাৎ, যে ডিরেক্টরিতে কাজ করছি তার নাম জানাও। pwd বর্তমান ডিরেক্টরির এ্যাবসলিউট পাথ বলে দেয়।
+
+দ্বিতীয় উদাহরণটি **ls** কমান্ডের। এটি বর্তমান ডিরেক্টরির মধ্যের অন্যান্য ফাইল ও ফোল্ডারের নাম লিস্ট করে দেয়। এই কমান্ডের আরো চমৎকার কার্যকারিতা আছে যা পরে আলোচিত হবে।
+
+এবার ভাবা যাক অন্য ডিরেক্টরিতে কীভাবে যাবো। এটার জন্য আমাদের দরকার হয় **cd** কমান্ডের। এই কমান্ডের আর্গুমেন্ট হিসেবে আপনি যে পাথনেম দেবেন সেখানে ঢুকে পড়বেন।
+
+```
+me@howtocode-pc:~/Music$ pwd
+/home/me/Music
+me@howtocode-pc:~/Music$ ls
+Bob Dylan                                       Ringtones  জাতিস্মর
+Music                                           Veer       রতন দা
+Pete Seeger - The Essential Pete Seeger (2005)  জল এর গান  রবীন্দ্রসঙ্গীত
+me@howtocode-pc:~/Music$ cd Ringtones/
+me@howtocode-pc:~/Music/Ringtones$ pwd
+/home/me/Music/Ringtones
+me@howtocode-pc:~/Music/Ringtones$ ls
+[4]_Its_my_life.ogg                  Ji-Hae Park Fast 2.ogg
+Amar mote by Lopamudra.ogg           Kya ye Mohabbat.ogg
+Amar mote by Rupankar.ogg            Lucky By Jason Marz for jol.ogg
+Amar mote Duet.ogg                   Lucky By Jason Marz for me.ogg
+Amio adhar by James.ogg              Majhe Majhe Tobo Dekha Pai.ogg
+Basuria.ogg                          Maula by Ali Azmat.ogg
+Beethoven_Piano-sonata-17-Storm.ogg  MOZART~1.ogg
+Bhoy Dekhas Na.ogg                   Nadan Parindey From Rockstar.ogg
+Droplet.ogg                          Noyono Tomare.ogg
+Excuse_boss.ogg                      Shadow Fight 1.ogg
+Excuse Me Darling.ogg                Shadow Fight 2.ogg
+Grieg _The-dance-of-Anitra.ogg       sherlocker_xmeo4wao.ogg
+Hariye Giyechi by Arnob.ogg          sounds-812-droplet.ogg
+Irin Adler Exotic Moan.ogg           Tumi akhono.ogg
+I won't give up By Jason Mraz.ogg    Tumse Hi by Mohit chauhan.ogg
+Jahazi By Shironamhin.ogg            We shall overcome kao kao.ogg
+Jani Dekha Hobe.ogg                  We shall overcome.ogg
+Ji-Hae Park Fast 1.ogg
+me@howtocode-pc:~/Music/Ringtones$ cd ../
+me@howtocode-pc:~/Music$ cd ~
+me@howtocode-pc:~$ cd /home/me/Music/Music/1.Bangla/
+me@howtocode-pc:~/Music/Music/1.Bangla$ pwd
+/home/me/Music/Music/1.Bangla
+```
+
+উদাহরনের শুরুতে আমরা **pwd** দিয়ে দেখে নিয়েছি যে আমরা /home/me/Music/ ফোল্ডারে আছি। এবং তারপর **ls** কমান্ডটি দিয়ে দেখেছি ওই ফোল্ডারে আর কি কি আছে। যেহেতু Ringtones নামের ফোল্ডারটি এই(/home/me/Music/) ফোল্ডারের মধ্যেই আছে তাই এই ফোল্ডার থেকে Ringtones ফোল্ডারে যেতে আমরা সহজ রিলেটিভ পাথ ব্যবহার করেছি। `cd Ringtones/` কমান্ড দিয়ে আমরা Ringtones ফোল্ডারে ঢুকেছি। তারপর pwd ও ls কমান্ড দিয়ে আমাদের অবস্থান ও Ringtone ফোল্ডার এর কন্টেন্ট দেখেছি। আবার আমরা /home/me/Music/ অর্থাৎ ঠিক উপরের ফোল্ডারে যেতে ব্যবহার করেছি `cd ../` এটা ঠিক ফাইল ব্রাউজারে আপ বাটন চাপার মত কাজ করে। এরপর আমরা হোমে ফিরে গেছি হোমের চিহ্ন '~' ব্যবহার করে এই কমান্ড দিয়ে `cd ~`। এবার আমরা এবসলিউট পাথ ব্যবহার করে /home/me/Music/Music/1.Bangla/ ফোল্ডারে এসেছি এই কমান্ড দিয়ে: `cd /home/me/Music/Music/1.Bangla/`।
+bash এর একটা মজার ফিচার হল ট্যাব কম্প্লিটেশন। অর্থাৎ কমান্ড এর বিভিন্ন অংশ, ফাইলপাথ খানিকটা লিখে ট্যাব চাপলে বাকিটুকু সে নিজেই লিখে দেয়। অতএব আপনার দীর্ঘলাইন লিখতে হবেনা। খানিকটা লিখে ট্যাব চেপে আবার প্রয়োজনে তারপরের খানিকটা লিখে ট্যাব চেপে চেপে আপনি সহজে সঠিক পাথে ঢুকতে পারবেন।
