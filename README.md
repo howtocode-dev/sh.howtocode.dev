@@ -4,7 +4,7 @@
 
 # শেল ও শেলস্ক্রিপ্টিং  
 
-### [উৎসব রায়](http://uroybd.tumblr.com)
+### [উৎসব রায়](http://www.facebook.com/uroybd)
 
 #### সংক্ষেপ
 
