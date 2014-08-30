@@ -7,3 +7,4 @@
    * [শেল ও প্রম্পট](shell.md)
    * [কমান্ড](command.md)
    * [নেভিগেশন](navigation.md)
+   * [আরো একটু ls](ls.md)
