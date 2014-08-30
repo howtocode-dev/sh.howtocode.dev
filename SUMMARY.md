@@ -8,3 +8,4 @@
    * [কমান্ড](command.md)
    * [নেভিগেশন](navigation.md)
    * [আরো একটু ls](ls.md)
+   * [ফাইল](file.md)
