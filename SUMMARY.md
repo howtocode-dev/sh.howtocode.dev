@@ -1,6 +1,6 @@
 # Summary
 
-* [শুরুর কথা](introduction.md)
+* [শুরুর কথা](README.md)
 * [প্রথম খন্ড](part1intro.md)
   * [প্রথম অধ্যায়](shell.md)
    * [শেল ও প্রম্পট](shell.md)
