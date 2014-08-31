@@ -9,3 +9,5 @@
    * [নেভিগেশন](navigation.md)
    * [আরো একটু ls](ls.md)
    * [ফাইল](file.md)
+   * [লিঙ্ক](link.md)
+   * [লিনাক্স ফাইলসিস্টেম](filesystem.md)
