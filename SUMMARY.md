@@ -27,3 +27,4 @@
    * [পাইপলাইন](1.3.6.pipelines.md)
   * [শেলের চোখে দেখা](1.4.0.eyeofshell.md)
    * [এক্সপ্যানসন](1.4.1.expansion.md)
+   * [পাথনেম এক্সপ্যানসন](1.4.2.pathnameexpansion.md)
