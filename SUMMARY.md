@@ -28,3 +28,4 @@
   * [শেলের চোখে দেখা](1.4.0.eyeofshell.md)
    * [এক্সপ্যানসন](1.4.1.expansion.md)
    * [পাথনেম এক্সপ্যানসন](1.4.2.pathnameexpansion.md)
+   * [গানিতিক এক্সপ্যানসন](1.4.3.arithmaticexpansion.md)
