@@ -34,3 +34,4 @@
    * [কমান্ড সাবস্টিটিউশন](1.4.6.commandsubstitution.md)
    * [ক্যোটিং](1.4.7.quoting.md)
    * [স্কেইপিং ক্যারেক্টার](1.4.8.escpchar.md)
+  * [কীবোর্ড ট্রিক্স](1.5.0.keyboardtricks.md)
