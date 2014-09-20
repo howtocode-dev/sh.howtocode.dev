@@ -33,3 +33,4 @@
    * [প্যারামিটার এক্সপ্যানসন](1.4.5.parameterexpansion.md)
    * [কমান্ড সাবস্টিটিউশন](1.4.6.commandsubstitution.md)
    * [ক্যোটিং](1.4.7.quoting.md)
+   * [ডবল ক্যোট](1.4.8.doublequotes.md)
