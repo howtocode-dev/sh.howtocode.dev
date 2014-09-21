@@ -36,3 +36,4 @@
    * [স্কেইপিং ক্যারেক্টার](1.4.8.escpchar.md)
   * [কীবোর্ড ট্রিক্স](1.5.0.keyboardtricks.md)
    * [কমান্ডলাইন এডিটিং](1.5.1.commandlineediting.md)
+   * [কমপ্লিশন](1.5.2.completion.md)
