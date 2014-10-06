@@ -29,7 +29,7 @@
    * [এক্সপ্যানসন](1.4.1.expansion.md)
    * [পাথনেম এক্সপ্যানসন](1.4.2.pathnameexpansion.md)
    * [গানিতিক এক্সপ্যানসন](1.4.3.arithmaticexpansion.md)
-   * [ব্রেস এক্সপ্যানসন](1.4.4.braceecpansion.md)
+   * [ব্রেস এক্সপ্যানসন](1.4.4.braceexpansion.md)
    * [প্যারামিটার এক্সপ্যানসন](1.4.5.parameterexpansion.md)
    * [কমান্ড সাবস্টিটিউশন](1.4.6.commandsubstitution.md)
    * [ক্যোটিং](1.4.7.quoting.md)
