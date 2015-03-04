@@ -1,5 +1,7 @@
 {
-    "plugins": ["disqus"],
+    "plugins": [
+        "disqus"
+    ],
     "pluginsConfig": {
         "disqus": {
             "shortName": "howtocode-com-bd"
@@ -9,5 +11,5 @@
         "sidebar": {
             "সব কোর্স লিস্ট দেখুন": "http://www.howtocode.com.bd"
         }
-    }    
+    }
 }
