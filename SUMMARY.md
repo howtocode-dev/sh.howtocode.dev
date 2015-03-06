@@ -69,3 +69,5 @@
       * [ন্যানো - এডিটিং এবং নেভিগেশন](3.2.1.2.nano-editnavigate.md)
       * [ন্যানো কনফিগারেশন](3.2.1.3.nano-configuration.md)
 * [চতুর্থ খন্ড - নেটওয়ার্কিং ](4.0.0.Networking.md)
+	* [প্রথম অধ্যায় - নেটওয়ার্ক পরীক্ষণ এবং পর্যবেক্ষন](4.1.0.examining and monitoring a network.md)
+	  * [ ping - বেসিক নেটওয়ার্কিং কমান্ড ](4.1.1.ping.md)
