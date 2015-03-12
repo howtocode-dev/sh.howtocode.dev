@@ -70,6 +70,7 @@
       * [ন্যানো কনফিগারেশন](3.2.1.3.nano-configuration.md)
     * [ভিম](3.2.2.0.vim.md)
       * [ভিম-এর এডিটিং মোড](3.2.2.1.vim-editing-mode.md)
+      * [ভিম-এর বেসিক এডিটিং](3.2.2.2.vim-basic-editing.md)
 * [চতুর্থ খন্ড - নেটওয়ার্কিং ](4.0.0.Networking.md)
   * [প্রথম অধ্যায় - নেটওয়ার্ক পরীক্ষণ এবং পর্যবেক্ষন](4.1.0.examining and monitoring a network.md)
     * [ ping - বেসিক নেটওয়ার্কিং কমান্ড ](4.1.1.ping.md)
