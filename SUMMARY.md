@@ -72,6 +72,7 @@
       * [ভিম-এর এডিটিং মোড](3.2.2.1.vim-editing-mode.md)
       * [ভিম-এর বেসিক এডিটিং](3.2.2.2.vim-basic-editing.md)
       * [ভিম: সার্চ এ্যান্ড রিপ্লেস](3.2.2.3.vim-search-and-replace.md)
+      * [ভিম: একাধিক ফাইল নিয়ে কাজ করা](3.2.2.4.vim-editing-multiple-files.md)
 * [চতুর্থ খন্ড - নেটওয়ার্কিং ](4.0.0.Networking.md)
   * [প্রথম অধ্যায় - নেটওয়ার্ক পরীক্ষণ এবং পর্যবেক্ষন](4.1.0.examining and monitoring a network.md)
     * [ ping - বেসিক নেটওয়ার্কিং কমান্ড ](4.1.1.ping.md)
