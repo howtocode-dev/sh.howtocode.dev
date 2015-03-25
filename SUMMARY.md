@@ -78,8 +78,7 @@
       * [ইম্যাকস্: ক্যারেক্টার, কী এবং কমান্ড](3.2.3.2.emacs-keys-and-command.md)
       * [ইম্যাকস্: বেসিক এডিটিং](3.2.3.3.emacs-basic-editing.md)
       * [ইম্যাকস্: সার্চ এ্যান্ড রিপ্লেস](3.2.3.4.emacs-search-and-replace.md)
-      * [ইম্যাকস্: একাধিক ফাইল এডিট করা](3.2.3.4.emacs-editing-multiple-files.md)
- 
+      * [ইম্যাকস্: একাধিক ফাইল এডিট করা](3.2.3.4.emacs-editing-multiple-files.md) 
    * [তৃতীয় অধ্যায় - স্টোরেজ মিডিয়া](3.3.0.storage-media.md)
     * [লিনাক্সের চোখে স্টোরেজ ডিভাইস](3.3.1.basic-concept.md)
 * [চতুর্থ খন্ড - নেটওয়ার্কিং ](4.0.0.Networking.md)
