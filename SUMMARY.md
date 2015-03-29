@@ -88,5 +88,4 @@
     * [ইমেজ তৈরী](3.3.6.cd-dvd-image.md)
     * [অপটিক্যাল মিডিয়ায় রাইট করা](3.3.7.cd-dvd-writing.md)
   * [চতুর্থ অধ্যায় - নেটওয়ার্কিং ](3.4.0.networking.md)
-    * [নেটওয়ার্ক পরীক্ষণ এবং পর্যবেক্ষন](3.4.1.0.examining-and-monitoring-a-network.md)
-      * [পিং](3.4.1.1.ping.md)
+    * [নেটওয়ার্ক পরীক্ষণ এবং পর্যবেক্ষন](3.4.1.examining-and-monitoring-a-network.md)
