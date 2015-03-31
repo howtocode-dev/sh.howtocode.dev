@@ -90,3 +90,4 @@
   * [চতুর্থ অধ্যায় - নেটওয়ার্কিং](3.4.0.networking.md)
     * [নেটওয়ার্ক পরীক্ষণ এবং পর্যবেক্ষন](3.4.1.examining-and-monitoring-a-network.md)
     * [ফাইল ট্রান্সফার](3.4.2.file-transfer.md)
+    * [নিরাপদ যোগাযোগ](3.4.3.secure-connection.md)
