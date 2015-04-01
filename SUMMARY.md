@@ -91,3 +91,5 @@
     * [নেটওয়ার্ক পরীক্ষণ এবং পর্যবেক্ষন](3.4.1.examining-and-monitoring-a-network.md)
     * [ফাইল ট্রান্সফার](3.4.2.file-transfer.md)
     * [নিরাপদ যোগাযোগ](3.4.3.secure-connection.md)
+  * [পঞ্চম অধ্যায় - ফাইল সার্চ](3.5.0.search.md)
+    * [Locate: নাম দিয়ে ফাইল সার্চ](3.5.1.locate.md)
