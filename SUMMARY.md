@@ -96,3 +96,4 @@
     * [find: শক্তিশালী সার্চ](3.5.2.0.find.md)
       * [find: টেস্ট](3.5.2.1.test.md)
       * [find: অপারেটর](3.5.2.2.operator.md)
+      * [find: অপশন](3.5.2.3.option.md)
