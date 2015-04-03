@@ -99,3 +99,4 @@
       * [find: একশন](3.5.2.3.action.md)
       * [find: অপশন](3.5.2.4.options.md)
       * [অনুশীলন](3.5.2.5.playground.md)
+  * [ষষ্ঠ অধ্যায় - আর্কাইভ ও ব্যাকআপ](3.6.0.0.archiving-and-backup.md)
