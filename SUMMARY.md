@@ -102,3 +102,4 @@
   * [ষষ্ঠ অধ্যায় - আর্কাইভ ও ব্যাকআপ](3.6.0.archiving-and-backup.md)
     * [ডাটা কম্প্রেশন](3.6.1.compressing-data.md)
     * [ডাটা আর্কাইভিং](3.6.2.archiving-data.md)
+    * [dtrx](3.6.3.dtrx.md)
