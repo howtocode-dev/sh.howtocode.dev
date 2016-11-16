@@ -1,13 +1,23 @@
 {
-    "plugins": ["disqus"],
-    "pluginsConfig": {
-        "disqus": {
-            "shortName": "howtocode-com-bd"
-        }
-    },
-    "links": {
-        "sidebar": {
-            "সব কোর্স লিস্ট দেখুন": "http://www.howtocode.com.bd"
-        }
-    }    
+	"gitbook": "2.x.x",
+	"plugins": ["disqus", "github", "edit-link"],
+	"pluginsConfig": {
+		"disqus": {
+			"shortName": "howtocode-com-bd"
+		},
+        "github": {
+            "url": "https://github.com/howtocode-com-bd/sh.howtocode.com.bd"
+        },
+        "edit-link": {
+            "base": "https://github.com/howtocode-com-bd/sh.howtocode.com.bd/blob/master",
+            "label": "চ্যাপ্টারটি আপডেট করুন"
+        }        
+	},
+	"links": {
+		"sidebar": {
+			"অন্যান্য কোর্স": "http://www.howtocode.com.bd",
+			"আমাদের ব্লগ": "https://blog.howtocode.com.bd/",
+			"পিডিএফ ডাউনলোড": "https://www.gitbook.com/download/pdf/book/howtocode-com-bd/-sh"
+		}
+	}  
 }
