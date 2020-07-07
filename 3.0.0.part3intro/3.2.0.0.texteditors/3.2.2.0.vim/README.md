@@ -1,0 +1,65 @@
+# ভিম
+
+ভিম\(VIM: Vi Improved\) Vi text editor এর একটি আধুনিক ভার্শন। ভিম খুবই শক্তিশালি এবং এবং রিসোর্সফ্রেন্ডলি এডিটর। অর্থাৎ এটি খুব সামান্য র‍্যাম ও প্রসেসর খরচ করে। কোড এডিটর হিসেবে এটি খুবই জনপ্রিয় এবং অধিকাংশ জিএনইউ/লিনাক্স অপারেটিং সিস্টেম এটি ডিফল্টভাবে দিয়ে রাখে। যদি না থাকে তবে এভাবে ইন্সটল করতে পারেন:
+
+ডেবিয়ান সিস্টেমে: `# apt-get install vim` রেড হ্যাট সিস্টেমে: `# yum install vim` আর্চ লিনাক্স সিস্টেমে: `# pacman -S vim`
+
+এবার শুরু করা যাক!
+
+## ভিম চালু ও বন্ধ করা
+
+ভিম চালু করতে লিখুন:
+
+```text
+me@howtocode-pc:~$ vim
+```
+
+ফলে এরকম একটাকিছু আপনি দেখতে পাবেন:
+
+```text
+~                                                                                                         
+~                                                                                                         
+~                                                                                                         
+~                                                                                                         
+~                                                                                                         
+~                                                                                                         
+~                                                                                                         
+~                                           VIM - Vi IMproved                                             
+~                                                                                                         
+~                                             version 7.4.52                                              
+~                                        by Bram Moolenaar et al.                                         
+~                        Modified by pkg-vim-maintainers@lists.alioth.debian.org                          
+~                              Vim is open source and freely distributable                                
+~                                                                                                         
+~                                     Help poor children in Uganda!                                       
+~                             type  :help iccf<Enter>       for information                               
+~                                                                                                         
+~                             type  :q<Enter>               to exit                                       
+~                             type  :help<Enter>  or  <F1>  for on-line help                              
+~                             type  :help version7<Enter>   for version info                              
+~                                                                                                         
+~                                     Running in Vi compatible mode                                       
+~                             type  :set nocp<Enter>        for Vim defaults                              
+~                             type  :help cp-default<Enter> for info on this                              
+~                                                                                                         
+~                                                                                                         
+~
+```
+
+আর বন্ধ করতে চাইলে লিখুন:
+
+```text
+:q
+```
+
+মনে রাখবেন ':' চিহ্নটি কমান্ডের অংশ। যদি কোনো কারনে তাও বন্ধ না হয়\(হয়ত কিছু লিখে ফেলেছেন যা সেভ করা হয়নি\) সেক্ষেত্রে বন্ধ করুন এভাবে:
+
+```text
+:q!
+```
+
+* [**ভিমের এডিটিং মোড**:](3.2.2.1.vim-editing-mode.md) ভিমের মোড সম্পর্কিত ধারণা।
+* [**ভিম-এর বেসিক এডিটিং**:](3.2.2.2.vim-basic-editing.md) ভিম-এর বেসিক এডিটিং।
+* [**ভিম: সার্চ এ্যান্ড রিপ্লেস**:](3.2.2.3.vim-search-and-replace.md) ভিমে সার্চ এবং রিপ্লেস অপারেশন।
+* [**ভিম: একাধিক ফাইল নিয়ে কাজ করা**:](3.2.2.4.vim-editing-multiple-files.md) ভিমে একাধিক ফাইল নিয়ে কাজ করা।
+
